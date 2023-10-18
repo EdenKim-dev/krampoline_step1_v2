@@ -7,7 +7,8 @@
 
 
 쿠버네티스 구성은 다음과 같습니다.
-![image](https://github.com/MonoKim01/krampoline-step1/assets/85483855/248fb708-aa34-446b-9d0c-8bb30c9bc5f4)
+![‎크램폴린 쿠버네티스 ‎001](https://github.com/EdenKim-dev/krampoline_step1_v2/assets/108042383/83a25d4c-4021-4186-8c43-6759ad69ab80)
+
 
 1. Deployment
   - 목적: 애플리케이션의 레플리카(복제본)를 관리하고 업데이트하는 방식을 정의.
@@ -49,23 +50,6 @@
 
 ```
 
-### k8s/ingress.yaml
-```yaml
-...
-spec:
-  rules:
-    - http:
-        paths:
-          - backend:
-              serviceName: krampoline
-              servicePort: 3000
-            # 여러분의 app path 를 넣어주세요.
-            # 해당 app path 주소는 IDE 에서 kargo 기능을 이용해서 생성하실 수 있습니다.
-            # 다음은 예시입니다.
-            path: /ka74894a7123da(/|$)(.*)
-
-```
-
 ## 기본적인 명령어
 자주 질문 주시는 명령어 입니다. 더 다양한 명령어는 [Kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)을 참고해주세요.
 
@@ -85,5 +69,5 @@ spec:
 
 - 꼭 `Dockerfile`과 `k8s` 폴더를 프로젝트에 포함시켜주세요.
   - 프로젝트의 루트 (`/`) 위치에 포함되게 해주세요.
-- `k8s/deployment.yaml`과 `k8s/ingress.yaml` 파일은 필히 확인하시기 바랍니다.
-- `main`브런치에 작성해주세요.
+- `k8s/deployment.yaml` 파일은 필히 확인하시기 바랍니다.
+- `main` 브런치에 작성해주세요.
